@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@400;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Work Sans", sans-serif;
+
+  --color-primary: #f37021;
+  --color-secondary: #1a2b56;
+  --color-tertiary: #033863;
+  --color-neutral-dark: #313131;
+
+  --radius-sharp: 0.375rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-neutral-dark antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+@layer components {
+  .kinetic-gradient {
+    background: linear-gradient(135deg, #f37021 0%, #a04100 100%);
+  }
+
+  .architect-shadow {
+    box-shadow: 0 24px 40px -10px rgba(26, 43, 86, 0.08);
+  }
+
+  .glass-nav {
+    @apply backdrop-blur-md bg-white/80 border-b border-white/20;
+  }
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
